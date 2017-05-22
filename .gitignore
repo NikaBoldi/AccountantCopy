@@ -1,3 +1,14 @@
+.settings/
+logs/
+tmp/
+.project
+.classpath
+.log
+node/
+target/
+Accountant.iml
+.idea/
+
 # Compiled class file
 *.class
 
