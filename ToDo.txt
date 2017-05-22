@@ -1,0 +1,1 @@
+Move all js code from jsp to js files
