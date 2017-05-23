@@ -32,7 +32,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
-//@Controller
+@Controller
 public class AccountController extends BaseController {
 
 	private static final Logger logger = Logger.getLogger(AccountController.class);

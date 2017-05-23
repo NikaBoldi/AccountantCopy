@@ -1,19 +1,16 @@
 package accountant.dao;
 
-import java.io.Serializable;
-import java.lang.reflect.ParameterizedType;
-import java.util.HashSet;
-import java.util.Set;
-
-//import javax.persistence.Query;
-
+import accountant.constants.State;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import accountant.constants.State;
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class AbstractDao<PK extends Serializable, T> {
     private final Class<T> persistentClass;

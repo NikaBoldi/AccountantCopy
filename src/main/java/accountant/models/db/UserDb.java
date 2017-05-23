@@ -1,14 +1,13 @@
 package accountant.models.db;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.*;
-
 import accountant.constants.State;
 import org.hibernate.annotations.GenerationTime;
 import org.hibernate.validator.constraints.NotBlank;
+
+import javax.persistence.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -51,7 +50,7 @@ public class UserDb {
     @JoinTable(name = "user_profiles",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "profile_id")})
-    private Set<ProfileDb> profiles = new HashSet<ProfileDb>();
+    private Set<ProfileDb> profiles = new HashSet<>();
 
     public int getId() {
         return id;
