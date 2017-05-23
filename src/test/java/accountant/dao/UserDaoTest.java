@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Set;
 
@@ -21,7 +20,7 @@ public class UserDaoTest {
     private UserDao userDao;
 
     @Test
-    //@Ignore
+    @Ignore
     //@Transactional
     @Rollback(true)
     public void mainTest() {
