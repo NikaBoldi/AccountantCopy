@@ -46,7 +46,7 @@ public class UserDb {
     @Column(name = "STATE", nullable = false)
     private String state = State.ACTIVE.toString();
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade={CascadeType.ALL})
     @JoinTable(name = "user_profiles",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "profile_id")})
@@ -151,6 +151,7 @@ public class UserDb {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", created=" + created +
+                ", state=" + state +
                 ", profiles=" + profiles +
                 '}';
     }
